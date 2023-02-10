@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+    <form id="regForm" action="/action_page.php">
+        <div class="container">
+            <h1>Register:</h1>
+            <!-- One "tab" for each step in the form: -->
+            <div class="tab">
+                <form action="#">
+                    <div class="form first">
+                        <div class="details personal">
+                            <span class="title">Personal Details</span>
+
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label> Name</label>
+                                    <input type="text" placeholder="First name" required> 
+                                    <input type="text" placeholder="Last name" required>
+                                </div>
+
+                                <div class="input-field">
+                                    <label>Date of Birth</label>
+                                    <input type="date" placeholder="Enter birth date" required>
+                                </div>
+
+                                <div class="input-field">
+                                    <label>Email</label>
+                                    <input type="text" placeholder="Enter your email" required>
+                                </div>
+
+                                <div class="input-field">
+                                    <label>Mobile Number</label>
+                                    <input type="number" placeholder="Enter mobile number" required>
+                                </div>
+
+                                <div class="input-field">
+                                    <label>Gender</label>
+                                    <select required>
+                                        <option disabled selected>Select gender</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-field">
+                                    <label>Occupation</label>
+                                    <input type="text" placeholder="Enter your ccupation" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="tab">Education Info:
+                <form action="#">
+                    <div class="form second">
+                        <div class="details HSC">
+                            <span class="title">HSC Details</span>
+
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label>HSC Institution name</label>
+                                    <input type="text" placeholder="Institution Name" required>
+                                </div>
+
+                                <div class="input-field">
+                                    <label>HSC Board</label>
+                                    <input type="text" placeholder="i.e. CBSE, ICSE or State Board" required>
+                                </div>
+
+                                <div class="input-field">
+                                    <label>Score in HSC</label>
+                                    <input type="text" placeholder="Enter in Percentage" required>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="details SSC">
+                            <span class="title">SSC Details</span>
+
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label>SSC Institution name</label>
+                                    <input type="text" placeholder="Institution Name" required>
+                                </div>
+
+                                <div class="input-field">
+                                    <label>SSC Board</label>
+                                    <input type="text" placeholder="i.e. CBSE, ICSE or State Board" required>
+                                </div>
+
+                                <div class="input-field">
+                                    <label>Score in SSC</label>
+                                    <input type="text" placeholder="Enter in Percentage" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Details Current">
+                            <span class="title">Current Education</span>
+
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label>Current Educational Institution name</label>
+                                    <input type="text" placeholder="Institution Name" required>
+                                </div>
+
+                                <div class="input-field">
+                                    <label>Currently Pursuing</label>
+                                    <input type="text" placeholder="i.e. B-Tech, BBA, etc" required>
+                                </div>
+
+                                <div class="input-field">
+                                    <label>Overall Percentage</label>
+                                    <input type="text" placeholder="Enter in Percentage" required>
+                                </div>
+
+                                <div class="input-field">
+                                    <label>Current backlogs</label>
+                                    <input type="text" placeholder="If any enter no. of backlogs else 0" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </form>
+            </div>
+    <div class="tab">
+        <label for="avatar">Recent passport size photograph (image size less than 4MB)</label>
+
+<input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg"><br>
+      <label for="avatar">➢ HSC mark sheet (image, PDF or docs size less than 4MB)</label>
+
+<input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg"><br>
+      <label for="avatar">➢ SSC mark sheet (image, PDF or docs size less than 4MB)</label>
+
+<input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg"><br>
+      <label for="avatar">➢ All semesters mark sheet in a single PDF or docs (file size less than 10MB)</label>
+
+<input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
+    </div>
+    <div style="overflow:auto;">
+        <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        </div>
+    </div>
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+    </div>
+    </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
